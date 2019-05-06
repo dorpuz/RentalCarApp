@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CARS} from "../mock-cars";
 import {Car} from "../car";
+import {SegmentService} from "../segment.service";
+import {Segment} from "../segment";
 
 @Component({
   selector: 'app-cars',
@@ -8,14 +11,23 @@ import {Car} from "../car";
 })
 export class CarsComponent implements OnInit {
 
-    car: Car = {
-      marka: "Fiat",
-      model: "500"
-    };
+  // selectedCar: Car;
+  // cars: Car[];
+  segments: Segment[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private carService: SegmentService) {
   }
 
+  ngOnInit() {
+    this.getSegments();
+  }
+
+  /*onSelect(car: Car): void {
+    this.selectedCar = car;
+  }*/
+
+  getSegments(): void {
+    this.carService.getSegments()
+      .subscribe(segments => this.segments = segments);
+  }
 }

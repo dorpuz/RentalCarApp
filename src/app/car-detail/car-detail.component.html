@@ -1,0 +1,8 @@
+<div *ngIf="car">
+
+  <h2>{{car.marka | uppercase }} {{car.model}} Details</h2>
+  <div><span>marka: </span>{{car.marka}}</div>
+  <div><span>model: </span>{{car.model}}</div>
+
+  <button (click)="goBack()" class="uk-button uk-button-primary">go back</button>
+</div>

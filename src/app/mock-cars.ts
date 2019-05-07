@@ -1,3 +1,4 @@
+/*
 import {Car} from "./car";
 
 export const CARS: Cars[]=[
@@ -7,3 +8,4 @@ export const CARS: Cars[]=[
   {id:4, marka: "Peugeot", model: "308"},
   {id:5, marka: "Opel", model: "Astra"},
 ]
+*/

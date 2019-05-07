@@ -10,7 +10,6 @@ import { CarDetailComponent } from './car-detail/car-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactComponent } from './contact/contact.component';
-import { CarSegmentsComponent } from './car-segments/car-segments.component';
 
 const appRoutes: Routes = [
 
@@ -24,8 +23,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     CarDetailComponent,
     DashboardComponent,
-    ContactComponent,
-    CarSegmentsComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,

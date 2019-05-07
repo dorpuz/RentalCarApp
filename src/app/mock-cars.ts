@@ -1,9 +1,9 @@
 import {Car} from "./car";
 
 export const CARS: Cars[]=[
-  {marka: "BMW", model: "seria 3"},
-  {marka: "Audi", model: "A4"},
-  {marka: "VW", model: "Golf"},
-  {marka: "Peugeot", model: "308"},
-  {marka: "Opel", model: "Astra"},
+  {id:1, marka: "BMW", model: "seria 3"},
+  {id:2,marka: "Audi", model: "A4"},
+  {id:3, marka: "VW", model: "Golf"},
+  {id:4, marka: "Peugeot", model: "308"},
+  {id:5, marka: "Opel", model: "Astra"},
 ]

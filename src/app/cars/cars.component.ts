@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CARS} from "../mock-cars";
 import {Car} from "../car";
-import {SegmentService} from "../segment.service";
+import {CarService} from "../car.service";
 import {Segment} from "../segment";
 
 @Component({
@@ -12,22 +12,22 @@ import {Segment} from "../segment";
 export class CarsComponent implements OnInit {
 
   // selectedCar: Car;
-  // cars: Car[];
-  segments: Segment[];
+  cars: Car[];
+  //segments: Segment[];
 
-  constructor(private carService: SegmentService) {
+  constructor(private carService: CarService) {
   }
 
   ngOnInit() {
-    this.getSegments();
+    this.getCars();
   }
 
   /*onSelect(car: Car): void {
     this.selectedCar = car;
   }*/
 
-  getSegments(): void {
-    this.carService.getSegments()
-      .subscribe(segments => this.segments = segments);
+  getCars(): void {
+    this.carService.getCars()
+      .subscribe(cars => this.cars = cars);
   }
 }

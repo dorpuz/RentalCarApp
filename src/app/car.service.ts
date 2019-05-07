@@ -8,11 +8,11 @@ import {Segment} from "./segment";
 @Injectable({
   providedIn: 'root'
 })
-export class SegmentService {
+export class CarService {
 
   constructor() { }
 
-  getSegments(): Observable<Segment[]>{
-    return of (SEGMENTS);
+  getCars(): Observable<Car[]>{
+    return of (CARS);
   }
 }

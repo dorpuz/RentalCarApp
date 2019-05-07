@@ -2,7 +2,7 @@ import {Car} from "../car";
 import { Component, OnInit, Input } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Location} from "@angular/common";
-import {SegmentService} from "../segment.service";
+import {CarService} from "../car.service";
 
 
 @Component({
@@ -15,7 +15,7 @@ export class CarDetailComponent implements OnInit {
   @Input() car: Car;
   constructor(
     private route: ActivatedRoute,
-    private carService: SegmentService,
+    private carService: CarService,
     private location: Location,
   ) { }
 

@@ -1,9 +1,18 @@
 <!--{{car}}-->
-<h4>Choose the best car for you:</h4>
+<!--<h4>Choose the best car for you:</h4>
 <ul class="segments">
   <li *ngFor="let segment of segments">
     <a routerLink="/detail/{{segment.id}}">
       <span class="badge">{{segment.name | uppercase}}</span> from {{segment.price}} PLN/day
+    </a>
+    &lt;!&ndash;[class.selected]="car === selectedCar" (click)="onSelect(car)">&ndash;&gt;
+  </li>
+</ul>-->
+<h4>Choose the best car for you:</h4>
+<ul class="cars">
+  <li *ngFor="let car of cars">
+    <a routerLink="/detail/{{car.id}}">
+      <span class="badge">{{car.marka | uppercase}}</span>  {{car.model}}
     </a>
     <!--[class.selected]="car === selectedCar" (click)="onSelect(car)">-->
   </li>

@@ -1,0 +1,8 @@
+<ul class="cars">
+  <li *ngFor="let car of cars">
+    <a routerLink="/cars/{{car.id}}">
+      <span class="badge">{{car.id}}</span> {{car.marka}} {{car.model}}
+    </a>
+    <!--[class.selected]="car === selectedCar" (click)="onSelect(car)">-->
+  </li>
+</ul>

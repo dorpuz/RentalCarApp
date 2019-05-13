@@ -1,6 +1,4 @@
 /*
-import {Car} from "./car";
-
 export const CARS: Cars[]=[
   {id:1, marka: "BMW", model: "seria 3"},
   {id:2,marka: "Audi", model: "A4"},

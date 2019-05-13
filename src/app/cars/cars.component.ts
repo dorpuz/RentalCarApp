@@ -22,5 +22,4 @@ export class CarsComponent implements OnInit {
     this.carService.getCars()
       .subscribe(cars => this.cars = cars);
   }
-
 }

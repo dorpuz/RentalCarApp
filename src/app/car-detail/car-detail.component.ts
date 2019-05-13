@@ -19,8 +19,15 @@ export class CarDetailComponent implements OnInit {
     private location: Location,
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getCar();
   }
+
+  getCar(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+      this.carService.getCar(id)
+      .subscribe(car => this.car = car);
+}
 
   goBack(): void{
     this.location.back();

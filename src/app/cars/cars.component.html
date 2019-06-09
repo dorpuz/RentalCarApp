@@ -1,20 +1,28 @@
-<!--{{car}}-->
-<!--<h4>Choose the best car for you:</h4>
-<ul class="segments">
-  <li *ngFor="let segment of segments">
-    <a routerLink="/detail/{{segment.id}}">
-      <span class="badge">{{segment.name | uppercase}}</span> from {{segment.price}} PLN/day
-    </a>
-    &lt;!&ndash;[class.selected]="car === selectedCar" (click)="onSelect(car)">&ndash;&gt;
-  </li>
-</ul>-->
+<!--
 <h4>Our cars:</h4>
 <ul class="cars">
   <li *ngFor="let car of cars">
     <a routerLink="/cars/{{car.id}}">
-      <span class="badge">{{car.id}}</span> {{car.marka}} {{car.model}}
+      <span class="badge">{{car.carClass}}</span> {{car.marka}} {{car.model}}
     </a>
-    <!--[class.selected]="car === selectedCar" (click)="onSelect(car)">-->
   </li>
+</ul>-->
+
+<h4>Our cars:</h4>
+<ul class="cars">
+  <ng-container *ngFor="let car of cars">
+    <li *ngIf="!car.isRented">
+    <a routerLink="/cars/{{car.id}}">
+      <span class="badge">{{car.carClass}}</span> {{car.marka}} {{car.model}}
+    </a>
+    </li>
+
+  </ng-container>
 </ul>
 
+
+<ng-container *ngFor="let nav_link of defaultLinks" >
+  <li *ngIf="nav_link.visible">
+    .....
+  </li>
+</ng-container>

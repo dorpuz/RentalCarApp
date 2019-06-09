@@ -1,5 +1,5 @@
 <h4>Please select date range within you need that car:</h4>
-<form class="uk-form uk-form-horizontal uk-margin-large" [formGroup]="myForm">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="uk-form uk-form-horizontal uk-margin-large" [formGroup]="myForm">
   <div class="col-l-12 col-12 col-md-8 form-group">
 
     <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
@@ -13,7 +13,7 @@
       -->
     </div>
     <a routerLink="confirm">
-      <button class="uk-button uk-button-danger">Confirm</button>
+      <button type="submit" class="uk-button uk-button-danger">Confirm</button>
     </a>
 
   </div>

@@ -6,10 +6,9 @@ export class RentalCar {
   dateTo: string;
 
 
-  constructor(idCar: number, nameOfRenters: string, dateFrom: string, dateTo: string){
+  constructor(idCar: number, dateFrom: string, dateTo: string){
     this.idCar = idCar;
-    this.isRented = false;
-    this.nameOfRenters = nameOfRenters;
+    this.isRented = true;
     this.dateFrom = dateFrom;
     this.dateTo = dateTo;
   }

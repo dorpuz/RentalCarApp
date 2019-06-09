@@ -1,0 +1,26 @@
+<h4>Please select date range within you need that car:</h4>
+<form class="uk-form uk-form-horizontal uk-margin-large" [formGroup]="myForm">
+  <div class="col-l-12 col-12 col-md-8 form-group">
+
+    <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+      <input type="text" class="form-control" placeholder="Daterangepicker"
+             bsDaterangepicker
+             [(ngModel)]="daterangepickerModel"
+             [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-red' }"/>
+
+     <!-- <pre *ngIf="myForm.value.range"
+           class="code-preview"> You want to rent this car from {{myForm.value.range[0] | date}} to {{myForm.value.range[1] | date}} ?</pre>
+      -->
+    </div>
+    <a routerLink="confirm">
+      <button class="uk-button uk-button-danger">Confirm</button>
+    </a>
+
+  </div>
+</form>
+
+
+
+
+
+

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {Car} from "./car";
-// import {CARS} from "./mock-cars";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable, of} from "rxjs";
 import {catchError} from "rxjs/operators";
@@ -32,7 +31,7 @@ export class CarService {
   getCar(id: number): Observable<Car> {
     const url = `${this.carUrl}/${id}`;
     return this.http.get<Car>(url)
-      .pipe(catchError(this.handleError<Car>(`getHero id=${id}`))
+      .pipe(catchError(this.handleError<Car>('getCar id=${id}'))
     );
   }
 

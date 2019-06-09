@@ -1,27 +1,14 @@
 <div *ngIf="car.id">
 
-  <h2>Details about car: {{car.marka}} {{car.model}}</h2>
-  <div><span>Car identification number: </span>{{car.id}}</div>
+  <h3>Details about car: {{car.marka}} {{car.model}}</h3>
   <div><span>Color: </span>{{car.color}}</div>
-  <div><span>Number of seats: </span>{{car.nrOfSeats}}</div>
-  <div><span>Autosegment: </span>{{car.carClass}}</div>
   <div><span>Price: </span>{{car.price}} PLN/day</div>
 
-  <button class="uk-button uk-button-primary">Rent this car</button>
-  <button (click)="goBack()" class="uk-button uk-button-primary">go back</button>
+  <a routerLink="/rent-car/{{car.id}}">
+    <button class="uk-button uk-button-danger">Rent this car</button>
+  </a>
+  <button (click)="goBack()" class="uk-button uk-button-danger">go back</button>
 </div>
 
 
-<!--
-<div *ngIf="hero">
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
-  </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
-</div>
--->
+
